@@ -66,6 +66,11 @@ body, html{
   display: none;
 }
 
+#hamburgerIcon img{
+  width: 50px;
+  height: 60px;
+}
+
 
 #mainContent{
   width: calc(100% - 280px);

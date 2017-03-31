@@ -3,10 +3,12 @@
 
 // my wikipedia module
 function myWikipedia() {
-    // initialize the parameters and dom elements
+
+    //wikipedia rest api url
     this.apiUrls = {'html' : '.wikipedia.org/api/rest_v1/page/html/',
      'summary': '.wikipedia.org/api/rest_v1/page/summary/'};
 
+   // initialize the parameters and dom elements
     this.defaultPageTitle = 'My Wikipedia';
     this.contentEl = 'mainContent';
     this.pageTitleEl = 'titleNav';
