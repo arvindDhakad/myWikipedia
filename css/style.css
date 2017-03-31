@@ -1,0 +1,117 @@
+
+body, html{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar{
+  display: block;
+  border-bottom: 1px solid #b7b0b0;
+}
+
+.navbar .navDiv{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f7f7f7;
+}
+
+.navbar .navDiv .titleNav{
+  text-align: center;
+  font-size: 1.7em;
+}
+/*sidebar styling*/
+#sidebar{
+  position: absolute;
+  width: 250px;
+  height: 100vh;
+  padding: 10px;
+  background: #fff;
+}
+#sidebar .searchDiv{
+  margin-left: 20px;
+}
+#sidebar .formInput{
+  margin-top: 10px;
+}
+
+#sidebar #articleName{
+  width: 200px;
+  padding: 10px;
+  background: #fff;
+}
+#sidebar #langSelector{
+  width: 224px;
+  padding: 10px;
+  background: #fff;
+}
+#sidebar #searchBtn{
+  width: 224px;
+  padding: 6px;
+  background: #36c;
+  border: #36c;
+  outline: none;
+  font-size: 1.3em;
+  color: #fff;
+}
+
+#sidebar #articleName:focus, #sidebar #langSelector:focus{
+  outline: none;
+}
+
+#isSummary{
+  padding: 10px;
+}
+
+#hamburgerIcon{
+  display: none;
+}
+
+
+#mainContent{
+  width: calc(100% - 280px);
+  float: right;
+}
+
+#loaderOverlay.shown{
+  display: block;
+  top:80px;
+  bottom:0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(251, 251, 251, 0.61);
+}
+#loaderOverlay.hidden{
+  display: none;
+}
+#loaderOverlay img {
+  display: table;
+  margin: 60px auto;
+}
+
+/*not found text styling*/
+.notFound{
+  text-align: center;
+}
+
+/* mobile screen*/
+
+@media (max-width: 480px) {
+  #sidebar.hidden{
+    margin-left: -260px;
+  }
+
+  #mainContent{
+    width: 90%;
+    margin: 0 auto;
+    /*float: right;*/
+  }
+  #sidebar.shown{
+    margin-left: 0px;
+  }
+  #hamburgerIcon{
+    display: block;
+    position: relative;
+    float: left;
+  }
+}

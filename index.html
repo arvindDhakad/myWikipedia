@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Wikipedia Custom Article</title>
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    
-  </body>
-  <script src="js/main.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- start of the page -->
+    <div id="pageContent">
+        <div class="navbar">
+            <div class="navDiv">
+              <div id="hamburgerIcon">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAABGUlEQVRoQ+2YSwrCQBBEnxvdiR5QPYCgIgheQUVEca839LN0JVkIEkw0PR0mI5V9V0+/mslU0iLxp5X4+tEAsR2UA3IgkIC2UCDA4PK8Ax1gDQyBXrC6r8AdOAML4PGSzg+wBya+fd3VDsC0aIBLA8nnCVyB/t8OsANm7qb7CmZrnBc50AZWwOjdJt/+ZrVs65yAZdkhNqvHKtRFFot80RmIvZ7K/bWFKiNzLviUhbbAAOg69wqV+ykLHYFxaKea60uz0K2B5CtloeQHSCFOf81Cm4Z+0CgL1fxyscnrJrZx86uSA34sbUrKQjZuQVXKQkH4HIpLf2wpCzkQLpJQFqoRrl1aN7GdnU+lHPDhaFeRA3Z2PpXJO/AEDAwwMek3d7wAAAAASUVORK5CYII=" alt="">
+              </div>
+                <h1 class="titleNav" id="titleNav">My Wikipedia</h1>
+            </div>
+        </div>
+        <div id="contents">
+            <!-- start of the sidebar  -->
+            <div id="sidebar" class="shown">
+                <div class="searchDiv">
+                    <form class="searchForm" method="post">
+                        <div class="formInput">
+                            <input type="text" id="articleName" name="articleName" value="" required="required" placeholder="Article name">
+                        </div>
+                        <div class="formInput">
+                            <select id="langSelector" name="language">
+                                <option value="ar" lang="ar">العربية</option><!-- Al-ʿArabīyah -->
+                                <option value="az" lang="az">Azərbaycanca</option>
+                                <option value="bg" lang="bg">Български</option><!-- Bǎlgarski -->
+                                <option value="el" lang="el">Ελληνικά</option><!-- Ellīniká -->
+                                <option value="en" lang="en" selected="selected">English</option><!-- English -->
+                                <option value="es" lang="es">Español</option>
+                                <option value="eo" lang="eo">Esperanto</option>
+                                <option value="eu" lang="eu">Euskara</option>
+                                <option value="fa" lang="fa">فارسی</option><!-- Fārsi -->
+                                <option value="fr" lang="fr">Français</option>
+                                <option value="gl" lang="gl">Galego</option>
+                                <option value="ko" lang="ko">한국어</option><!-- Hangugeo -->
+                                <option value="hy" lang="hy">Հայերեն</option><!-- Hayeren -->
+                                <option value="hi" lang="hi">हिन्दी</option><!-- Hindī -->
+                                <option value="it" lang="it">Italiano</option>
+                                <option value="he" lang="he">עברית</option><!-- ʿIvrit -->
+                                <option value="ka" lang="ka">ქართული</option><!-- Kartuli -->
+                                <option value="la" lang="la">Latina</option>
+                                <option value="hu" lang="hu">Magyar</option>
+                                <option value="ja" lang="ja">日本語</option><!-- Nihongo -->
+                                <option value="pt" lang="pt">Português</option>
+                                <option value="kk" lang="kk">Қазақша / Qazaqşa / قازاقشا</option>
+                                <option value="ro" lang="ro">Română</option>
+                                <option value="ru" lang="ru">Русский</option><!-- Russkiy -->
+                            </select>
+                        </div>
+                        <div class="formInput">
+                            <label for="isSummary">Summary </label>
+                            <input type="checkbox" id="isSummary" value="isSummary">
+                        </div>
+
+                        <div class="formInput">
+                            <button id="searchBtn" name="searchBtn" value="fetch">Fetch</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end of the sidebar -->
+
+            <!-- start of the main content -->
+            <div id="mainContent">
+
+            </div>
+            <!-- end of the main content -->
+        </div>
+    </div>
+
+    <div id="loaderOverlay" class="hidden">
+        <img src="img/ajax-loader.gif" alt="">
+    </div>
+
+
+
+</body>
+<script src="js/main.js" charset="utf-8"></script>
 </html>
